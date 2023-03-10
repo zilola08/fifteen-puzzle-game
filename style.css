@@ -78,11 +78,17 @@ body {
 
 .moves,
 .time {
+    width: 200px;
+    height: 60px;
     padding: 0.5rem;
     border: none;
     color: white;
     background-color: rgb(188, 149, 203);
     border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .size-box {

@@ -156,6 +156,7 @@ soundButton.addEventListener("click",function () {
     soundButton.innerHTML = "Sound ON";
     soundButton.classList.remove("sound-on")
   } else {
+    newPuzzle.audio.volume = 0.3;
     soundButton.innerHTML = "Sound OFF";
     soundButton.classList.add("sound-on")
   }
