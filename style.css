@@ -78,9 +78,8 @@ body {
 
 .moves,
 .time {
-    width: 200px;
-    height: 60px;
-    padding: 0.5rem;
+    width: 6em;
+    height: 1.5em;
     border: none;
     color: white;
     background-color: rgb(188, 149, 203);
