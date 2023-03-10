@@ -1,4 +1,4 @@
-# The **"15-puzzle"** game
+# The **15-puzzle** game
 
 [You can read about this game here](https://en.wikipedia.org/wiki/15_puzzle)
 
