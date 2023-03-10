@@ -177,13 +177,10 @@ function createBoard(gameSize) {
     } else if (window.innerWidth >= 500 && window.innerWidth < 1000) {
       gameboard.style.width = `${window.innerWidth * 0.6}px`;
       gameboard.style.height = `${window.innerWidth * 0.6}px`;
-    } else if (window.innerWidth >= 1000 && window.innerWidth < 2000) {
-      gameboard.style.width = `${window.innerWidth * 0.3}px`;
-      gameboard.style.height = `${window.innerWidth * 0.3}px`;
-    } else if (window.innerWidth > 2000) {
-      gameboard.style.width = `${window.innerWidth * 0.15}px`;
-      gameboard.style.height = `${window.innerWidth * 0.15}px`;
-    }
+    } else if (window.innerWidth >= 1000) {
+      gameboard.style.width = `${window.innerWidth * 0.35}px`;
+      gameboard.style.height = `${window.innerWidth * 0.35}px`;
+    } 
     boardWidth = gameboard.style.width.slice(0,-2);
     tile.style.width = `${boardWidth / Math.sqrt(gameSize + 1)}px`;
     tile.style.height = tile.style.width;
