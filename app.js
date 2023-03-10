@@ -175,12 +175,18 @@ function createBoard(gameSize) {
       gameboard.style.width = `${window.innerWidth * 0.8}px`;
       gameboard.style.height = `${window.innerWidth * 0.8}px`;
     } else if (window.innerWidth >= 500 && window.innerWidth < 1000) {
-      gameboard.style.width = `${window.innerWidth * 0.6}px`;
-      gameboard.style.height = `${window.innerWidth * 0.6}px`;
-    } else if (window.innerWidth >= 1000) {
-      gameboard.style.width = `${window.innerWidth * 0.35}px`;
-      gameboard.style.height = `${window.innerWidth * 0.35}px`;
-    } 
+      gameboard.style.width = `${window.innerWidth * 0.5}px`;
+      gameboard.style.height = `${window.innerWidth * 0.5}px`;
+    } else if (window.innerWidth >= 1000 && window.innerWidth < 1500) {
+      gameboard.style.width = `${window.innerWidth * 0.4}px`;
+      gameboard.style.height = `${window.innerWidth * 0.4}px`;
+    } else if (window.innerWidth >= 1500 && window.innerWidth < 1900) {
+      gameboard.style.width = `${window.innerWidth * 0.3}px`;
+      gameboard.style.height = `${window.innerWidth * 0.3}px`;
+    } else {
+      gameboard.style.width = `${window.innerWidth * 0.25}px`;
+      gameboard.style.height = `${window.innerWidth * 0.25}px`;
+    }
     boardWidth = gameboard.style.width.slice(0,-2);
     tile.style.width = `${boardWidth / Math.sqrt(gameSize + 1)}px`;
     tile.style.height = tile.style.width;
