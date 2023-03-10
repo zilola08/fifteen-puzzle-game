@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fuzzy Bubbles', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    user-select: none;
+    background-color: rgb(231, 202, 251);
+    padding: 2rem 0.5rem;
+    border-radius: 1rem;
+    border: solid 0.5rem rgb(104, 70, 138);
+}
+
+.gameboard {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    background-color: rgb(240, 184, 250);
+    font-family: 'Arial', cursive;
+}
+
+.moves-and-time-box {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.tile {
+    border: 1px solid rgb(212, 249, 237);
+    /* border-radius: 0.5rem; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* width: 25.4%;
+    height: 25.4%; */
+    transition: left 0.3s, top 0.3s;
+    font-size: 1em;
+    color: rgb(226, 246, 248);
+    background-color: rgb(138, 70, 138);
+}
+
+.button {
+    padding: 0.5rem;
+    border: none;
+    color: white;
+    background-color: rgb(104, 70, 138);
+    border-radius: 0.5rem;
+    font-size: 0.7em;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.moves,
+.time {
+    padding: 0.5rem;
+    border: none;
+    color: white;
+    background-color: rgb(188, 149, 203);
+    border-radius: 0.5rem;
+}
+
+.size-box {
+    display: flex;
+    /* width: 80%; */
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.size-button {
+    border: rgb(104, 70, 138) 1px solid;
+    border-radius: 0.5rem;
+    color: rgb(104, 70, 138);
+    background-color: rgb(240, 184, 250);
+    ;
+    cursor: pointer;
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: 0.6em;
+}
+
+.size-selected {
+    background-color: rgb(104, 70, 138);
+    color: white;
+    border: white 1px solid;
+}
+
+.scoresTable {
+    border: solid rgb(187, 171, 203) 1px;
+    margin: 20px;
+    z-index: 2;
+    font-size: 0.8em;
+}
+
+.scoresTitleRow {
+    border-bottom: solid rgb(187, 171, 203) 1px;
+}
+
+.scoresTitleRow>td,
+.scoresNewData {
+    padding: 0.5em 0.5em 0 0;
+    text-align: center;
+}
+
+.scoresTitleRow>td {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.scoresWindow {
+    display: none;
+    position: absolute;
+    background-color: rgb(240, 184, 250);
+    color: white;
+    border-radius: 10px;
+}
+
+.scoresWindow.shown {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.scoresClose {
+    width: 2rem;
+    height: 2rem;
+    align-self: flex-end;
+    z-index: 2;
+    background-color: rgba(240, 184, 250, 0.238);
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.popup {
+    display: block;
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        font-size: 2em;
+    }
+
+}
