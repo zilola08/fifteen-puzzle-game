@@ -539,6 +539,7 @@ newGameButton.addEventListener("click",function () {
   createBoard(gameSize);
   newPuzzle.start(gameSize);
   body.style.background = "none";
+  body.style.backgroundColor = "black";
 })
 
 sizeButtons.forEach(sizeButton => {
