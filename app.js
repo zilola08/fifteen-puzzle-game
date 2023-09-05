@@ -150,7 +150,7 @@ movesAndTime.appendChild(spanMoves);
 movesAndTime.appendChild(spanTime);
 
 let soundButton = document.querySelector(".button__sound");
-soundButton.addEventListener("click",function () {
+soundButton.addEventListener("mousedown", () => {
   if (soundButton.classList.contains("sound-on")) {
     newPuzzle.audio.volume = 0;
     soundButton.innerHTML = "Sound: OFF";
@@ -162,17 +162,17 @@ soundButton.addEventListener("click",function () {
   }
 });
 
-soundButton.addEventListener("touchstart",function () {
-  if (soundButton.classList.contains("sound-on")) {
-    newPuzzle.audio.volume = 0;
-    soundButton.innerHTML = "Sound: OFF";
-    soundButton.classList.remove("sound-on")
-  } else {
-    newPuzzle.audio.volume = 0.2;
-    soundButton.innerHTML = "Sound: ON";
-    soundButton.classList.add("sound-on")
-  }
-})
+// soundButton.addEventListener("touchstart",function () {
+//   if (soundButton.classList.contains("sound-on")) {
+//     newPuzzle.audio.volume = 0;
+//     soundButton.innerHTML = "Sound: OFF";
+//     soundButton.classList.remove("sound-on")
+//   } else {
+//     newPuzzle.audio.volume = 0.2;
+//     soundButton.innerHTML = "Sound: ON";
+//     soundButton.classList.add("sound-on")
+//   }
+// })
 
 function createBoard(gameSize) {
   const gameboard = document.createElement('div');
@@ -224,7 +224,7 @@ class Puzzle {
     this.timer = null;
     this.audio = new Audio();
     this.audio.src = "./assets/tile-move.mp3";
-    this.audio.volume = 0.3;
+    this.audio.volume = 0.2;
 
     for (let y = 0; y < this.rows; y++) {
       for (let x = 0; x < this.cols; x++) {
@@ -239,13 +239,6 @@ class Puzzle {
           let movesCount = document.querySelector(".move-count")
           movesCount.innerHTML++;
         });
-
-        tile.addEventListener("dragstart",dragStart);  //click an image to drag
-        tile.addEventListener("dragover",dragOver);    //moving image around while clicked
-        tile.addEventListener("dragenter",dragEnter);  //dragging image onto another one
-        tile.addEventListener("dragleave",dragLeave);  //dragged image leaving anohter image
-        tile.addEventListener("drop",dragDrop);        //drag an image over another image, drop the image
-        tile.addEventListener("dragend",dragEnd);      //after drag drop, swap the two tiles
 
         this.indices.push(tileIndex);
       }
@@ -390,69 +383,7 @@ class Puzzle {
   changeSize(gameSize) {
     this.start(gameSize);
   }
-
-  dragTile(tileIndex) {
-    let tile = this.tiles[tileIndex];
-    if (this.canMoveTile()) {
-      console.log(tile);
-    }
   }
-}
-var currTile;
-var otherTile;
-
-function dragStart() {
-  currTile = this;
-  //this refers to the img tile being dragged
-}
-
-function dragOver(e) {
-  e.preventDefault();
-}
-
-function dragEnter(e) {
-  e.preventDefault();
-}
-
-function dragLeave() {
-
-}
-
-function dragDrop() {
-  otherTile = this;
-  //this refers to the img tile being dropped on
-}
-
-function dragEnd() {
-  // if (newPuzzle.canMoveTile()) {
-  //   newPuzzle.moveTile();
-  // }
-  // let currCoords = currTile.id.split("-"); //ex) "0-0" -> ["0", "0"]
-  // let r = parseInt(currCoords[0]);
-  // let c = parseInt(currCoords[1]);
-
-  // let otherCoords = otherTile.id.split("-");
-  // let r2 = parseInt(otherCoords[0]);
-  // let c2 = parseInt(otherCoords[1]);
-
-  // let moveLeft = r == r2 && c2 == c - 1;
-  // let moveRight = r == r2 && c2 == c + 1;
-
-  // let moveUp = c == c2 && r2 == r - 1;
-  // let moveDown = c == c2 && r2 == r + 1;
-
-  // let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
-
-  // if (isAdjacent) {
-  //   let currImg = currTile.src;
-  //   let otherImg = otherTile.src;
-
-  //   currTile.src = otherImg;
-  //   otherTile.src = currImg;
-
-  //   turns += 1;
-  //   document.getElementById("turns").innerText = turns;
-  // }
 }
 
 const canMoveWithArrow = (arrayDiffRule) => {
