@@ -150,7 +150,7 @@ movesAndTime.appendChild(spanMoves);
 movesAndTime.appendChild(spanTime);
 
 let soundButton = document.querySelector(".button__sound");
-soundButton.addEventListener("click",function () {
+soundButton.addEventListener("mousedown",function () {
   if (soundButton.classList.contains("sound-on")) {
     newPuzzle.audio.volume = 0;
     soundButton.innerHTML = "Sound ON";
