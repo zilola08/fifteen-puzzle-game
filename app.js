@@ -22,7 +22,7 @@ newGameButton.appendChild(buttonSpan);
 controlsBox.appendChild(newGameButton);
 const sound = document.createElement('button');
 sound.className = "button button__sound sound-on"
-sound.innerHTML = "Sound OFF";
+sound.innerHTML = "Sound: ON";
 controlsBox.appendChild(sound);
 const sizeBox = document.createElement('div');
 sizeBox.className = "size-box";
@@ -150,14 +150,26 @@ movesAndTime.appendChild(spanMoves);
 movesAndTime.appendChild(spanTime);
 
 let soundButton = document.querySelector(".button__sound");
-soundButton.addEventListener("mousedown",function () {
+soundButton.addEventListener("click",function () {
   if (soundButton.classList.contains("sound-on")) {
     newPuzzle.audio.volume = 0;
-    soundButton.innerHTML = "Sound ON";
+    soundButton.innerHTML = "Sound: OFF";
     soundButton.classList.remove("sound-on")
   } else {
-    newPuzzle.audio.volume = 0.3;
-    soundButton.innerHTML = "Sound OFF";
+    newPuzzle.audio.volume = 0.2;
+    soundButton.innerHTML = "Sound: ON";
+    soundButton.classList.add("sound-on")
+  }
+});
+
+soundButton.addEventListener("touchstart",function () {
+  if (soundButton.classList.contains("sound-on")) {
+    newPuzzle.audio.volume = 0;
+    soundButton.innerHTML = "Sound: OFF";
+    soundButton.classList.remove("sound-on")
+  } else {
+    newPuzzle.audio.volume = 0.2;
+    soundButton.innerHTML = "Sound: ON";
     soundButton.classList.add("sound-on")
   }
 })
