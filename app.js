@@ -383,7 +383,6 @@ class Puzzle {
   changeSize(gameSize) {
     this.start(gameSize);
   }
-  }
 }
 
 const canMoveWithArrow = (arrayDiffRule) => {
