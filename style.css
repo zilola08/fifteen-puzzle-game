@@ -16,10 +16,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     user-select: none;
     background-color: rgb(231, 202, 251);
-    padding: 2rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 1rem;
     border: solid 0.5rem rgb(104, 70, 138);
 /*     font-size: 1.5em; */
