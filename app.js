@@ -200,7 +200,7 @@ function createBoard(gameSize) {
       gameboard.style.height = `${window.innerWidth * 0.25}px`;
     }
     boardWidth = gameboard.style.width.slice(0,-2);
-    tile.style.width = `${(boardWidth / Math.sqrt(gameSize + 1))/4}px`;
+    tile.style.width = `${boardWidth / Math.sqrt(gameSize + 1)}px`;
     tile.style.height = tile.style.width;
     let span = document.createElement('span');
     span.className = "tile-text";
