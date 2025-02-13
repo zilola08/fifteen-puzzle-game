@@ -187,9 +187,12 @@ function createBoard(gameSize) {
       gameboard.style.width = `${window.innerWidth * 0.8}px`;
       gameboard.style.height = `${window.innerWidth * 0.8}px`;
     } else if (window.innerWidth >= 500 && window.innerWidth < 1000) {
-      gameboard.style.width = `${window.innerWidth * 0.3}px`;
-      gameboard.style.height = `${window.innerWidth * 0.3}px`;
-    } else if (window.innerWidth >= 1000 && window.innerWidth < 1500) {
+      gameboard.style.width = `${window.innerWidth * 0.4}px`;
+      gameboard.style.height = `${window.innerWidth * 0.4}px`;
+    } else if (window.innerWidth >= 1000 && window.innerWidth < 1200) {
+      gameboard.style.width = `${window.innerWidth * 0.4}px`;
+      gameboard.style.height = `${window.innerWidth * 0.4}px`;
+    } else if (window.innerWidth >= 1200 && window.innerWidth < 1500) {
       gameboard.style.width = `${window.innerWidth * 0.3}px`;
       gameboard.style.height = `${window.innerWidth * 0.3}px`;
     } else if (window.innerWidth >= 1500 && window.innerWidth < 1900) {
