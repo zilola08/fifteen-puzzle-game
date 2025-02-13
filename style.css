@@ -5,12 +5,9 @@
 }
 
 body {
-/*     height: 80vh;
-    width: 80vw; */
-/*     display: flex;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     background-color: black;
 }
 
@@ -25,7 +22,8 @@ body {
     padding: 2rem 0.5rem;
     border-radius: 1rem;
     border: solid 0.5rem rgb(104, 70, 138);
-    font-size: 1.5em;
+/*     font-size: 1.5em; */
+    width: fit-content;
 }
 
 .gameboard {
