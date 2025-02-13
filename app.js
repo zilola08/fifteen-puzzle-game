@@ -184,8 +184,8 @@ function createBoard(gameSize) {
     tile.setAttribute('draggable',true);
     gameboard.appendChild(tile);
     if (window.innerWidth < 500) {
-      gameboard.style.width = `${window.innerWidth * 0.8}px`;
-      gameboard.style.height = `${window.innerWidth * 0.8}px`;
+      gameboard.style.width = `${window.innerWidth * 0.7}px`;
+      gameboard.style.height = `${window.innerWidth * 0.7}px`;
     } else if (window.innerWidth >= 500 && window.innerWidth < 1000) {
       gameboard.style.width = `${window.innerWidth * 0.4}px`;
       gameboard.style.height = `${window.innerWidth * 0.4}px`;
