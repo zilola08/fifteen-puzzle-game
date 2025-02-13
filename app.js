@@ -200,6 +200,11 @@ function createBoard(gameSize) {
       gameboard.style.height = `${window.innerWidth * 0.25}px`;
     }
     boardWidth = gameboard.style.width.slice(0,-2);
+    
+    console.log("windowSize", window.innerWidth);
+    console.log("gameboard.style.width", gameboard.style.width);
+    console.log("boardWidth", boardWidth);
+    
     tile.style.width = `${boardWidth / Math.sqrt(gameSize + 1)}px`;
     tile.style.height = tile.style.width;
     let span = document.createElement('span');
