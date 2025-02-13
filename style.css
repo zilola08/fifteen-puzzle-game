@@ -7,11 +7,10 @@
 body {
 /*     height: 80vh;
     width: 80vw; */
-    display: flex;
+/*     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    font-size: 2em;
+    align-items: center; */
     background-color: black;
 }
 
@@ -26,6 +25,7 @@ body {
     padding: 2rem 0.5rem;
     border-radius: 1rem;
     border: solid 0.5rem rgb(104, 70, 138);
+    font-size: 1.5em;
 }
 
 .gameboard {
@@ -58,7 +58,7 @@ body {
     /* width: 25.4%;
     height: 25.4%; */
     transition: left 0.3s, top 0.3s;
-    font-size: 1em;
+    font-size: 2rem;
     color: rgb(226, 246, 248);
     background-color: rgb(138, 70, 138);
 }
@@ -69,7 +69,6 @@ body {
     color: white;
     background-color: rgb(104, 70, 138);
     border-radius: 0.5rem;
-    font-size: 0.7em;
 }
 
 .controls {
@@ -79,8 +78,8 @@ body {
 
 .moves,
 .time {
-    width: 6em;
-    height: 1.5em;
+    width: 6rem;
+/*     height: 1.5rem; */
     border: none;
     color: white;
     background-color: rgb(188, 149, 203);
@@ -106,7 +105,7 @@ body {
     ;
     cursor: pointer;
     padding: 0 0.5rem 0 0.5rem;
-    font-size: 0.6em;
+    font-size: 0.6rem;
 }
 
 .size-selected {
@@ -119,7 +118,7 @@ body {
     border: solid rgb(187, 171, 203) 1px;
     margin: 20px;
     z-index: 2;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 .scoresTitleRow {
@@ -128,7 +127,7 @@ body {
 
 .scoresTitleRow>td,
 .scoresNewData {
-    padding: 0.5em 0.5em 0 0;
+    padding: 0.5rem 0.5rem 0 0;
     text-align: center;
 }
 
@@ -179,7 +178,7 @@ body {
 
 @media only screen and (min-width: 1000px) {
     body {
-        font-size: 1.5em;
+/*         font-size: 1.5rem; */
     }
 
 }
