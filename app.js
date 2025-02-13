@@ -187,17 +187,17 @@ function createBoard(gameSize) {
       gameboard.style.width = `${window.innerWidth * 0.8}px`;
       gameboard.style.height = `${window.innerWidth * 0.8}px`;
     } else if (window.innerWidth >= 500 && window.innerWidth < 1000) {
-      gameboard.style.width = `${window.innerWidth * 0.4}px`;
-      gameboard.style.height = `${window.innerWidth * 0.4}px`;
-    } else if (window.innerWidth >= 1000 && window.innerWidth < 1500) {
-      gameboard.style.width = `${window.innerWidth * 0.4}px`;
-      gameboard.style.height = `${window.innerWidth * 0.4}px`;
-    } else if (window.innerWidth >= 1500 && window.innerWidth < 1900) {
       gameboard.style.width = `${window.innerWidth * 0.3}px`;
       gameboard.style.height = `${window.innerWidth * 0.3}px`;
+    } else if (window.innerWidth >= 1000 && window.innerWidth < 1500) {
+      gameboard.style.width = `${window.innerWidth * 0.3}px`;
+      gameboard.style.height = `${window.innerWidth * 0.3}px`;
+    } else if (window.innerWidth >= 1500 && window.innerWidth < 1900) {
+      gameboard.style.width = `${window.innerWidth * 0.2}px`;
+      gameboard.style.height = `${window.innerWidth * 0.2}px`;
     } else {
-      gameboard.style.width = `${window.innerWidth * 0.25}px`;
-      gameboard.style.height = `${window.innerWidth * 0.25}px`;
+      gameboard.style.width = `${window.innerWidth * 0.2}px`;
+      gameboard.style.height = `${window.innerWidth * 0.2}px`;
     }
     boardWidth = gameboard.style.width.slice(0,-2);
     
